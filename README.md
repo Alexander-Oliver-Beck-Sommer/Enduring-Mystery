@@ -1,10 +1,11 @@
 ## Enduring Mystery
 
-This is a freetime webshop project i have built from the ground, with help of the NextJS framework, along with our languages including:
+This is a freetime webshop project i have built from the ground, with help of the NextJS framework, along with other languages including:
 
 ```bash
 SCSS - CSS
 TypeScript - JavaScript
+HTML
 ```
 
 The theme of the webshop is a mysterious company dubbed "Enduring Mystery" who specializes in scouting, collecting, and selling mysterious artifacts throughout the whole world.
