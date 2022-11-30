@@ -17,6 +17,7 @@ import RaritiesImage from "../../../public/images/thumbnails/rarities-thumbnail.
 import ObjectsImage from "../../../public/images/thumbnails/objects-thumbnail.png";
 import RelicsThumbnail from "../../../public/images/thumbnails/relics-thumbnail.png";
 import MomentosThumbnail from "../../../public/images/thumbnails/momentos-thumbnail.png";
+import TaboosThumbnail from "../../../public/images/thumbnails/taboos-thumbnail.png";
 
 if (typeof window !== "undefined") {
   const container = document.getElementById("shop-sub-menu");
@@ -44,7 +45,7 @@ if (typeof window !== "undefined") {
       navButton.style = "color: #fdfdfd;";
       navButtonArrow.style = "transform: rotate(-90deg);";
     } else {
-      container.style = "visibility: visible; max-height: 1000px;";
+      container.style = "visibility: visible; max-height: 1500px;";
       navButton.style = "color: #8f8f8f;";
       navButtonArrow.style = "transform: rotate(90deg);";
     }
@@ -285,6 +286,26 @@ export default function HeaderDesktop() {
                     </div>
                     <div className={styles.category_description}>
                       <p>Momentos handed down, through several generations</p>
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/shop/taboos"
+                    alt="Go to taboos shop page"
+                    className={styles.category_items_containers}
+                  >
+                    <div className={styles.category_image}>
+                      <Image
+                        src={TaboosThumbnail}
+                        alt="Statue of a deformed humanoid, with a cube as it's head"
+                      />
+                    </div>
+                    <div className={styles.category_title}>
+                      <h3>Taboos</h3>
+                    </div>
+                    <div className={styles.category_description}>
+                      <p>Highly forbidden items, with a dreadful past</p>
                     </div>
                   </Link>
                 </li>
