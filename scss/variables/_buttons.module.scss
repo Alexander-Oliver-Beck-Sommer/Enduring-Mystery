@@ -1,0 +1,24 @@
+@use "../abstracts/" as *;
+
+.button_navigation_link {
+  background-color: $colors_main_black;
+  color: $colors_main_white;
+  // margin: em(10px) 0;
+  padding: em(15px) em(30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font__size_16;
+  gap: em(15px);
+  border-radius: em(5px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  & p {
+    margin: 0;
+  }
+  &:hover {
+    background-color: $colors_main_purple;
+  }
+}

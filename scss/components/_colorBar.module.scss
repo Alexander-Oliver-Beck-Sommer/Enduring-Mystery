@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+
+.colorBar_container {
+    width: 100%;
+    height: em(5px);
+    background: $colors_main_purple;
+    // background: $gradient_cosmicFusion_fallback;
+    // background: $gradient_cosmicFusion_webkit;
+    // background: $gradient_cosmicFusion_linear;
+}

@@ -1,0 +1,42 @@
+// Main Color Palette
+$colors_main_blue: #232087;
+$colors_main_purple: #6200ea;
+$colors_main_light_purple: #af86e8;
+$colors_main_black: #212121;
+$colors_main_grey: #8f8f8f;
+$colors_main_white: #fdfdfd;
+
+// Default Color Palette
+$colors_default_white: #ffffff;
+$colors_default_ghostWhite: #e0e0e0;
+$colors_default_black: #000000;
+
+// Gradient - Cosmic Fusion
+$gradient_cosmicFusion_pink: #ff00cc;
+$gradient_cosmicFusion_blue: #333399;
+$gradient_cosmicFusion_fallback: $gradient_cosmicFusion_pink;
+$gradient_cosmicFusion_webkit: -webkit-linear-gradient(
+  to right,
+  $gradient_cosmicFusion_pink,
+  $gradient_cosmicFusion_blue
+);
+$gradient_cosmicFusion_linear: linear-gradient(
+  to right,
+  $gradient_cosmicFusion_pink,
+  $gradient_cosmicFusion_blue
+);
+
+// Gradient - Purpink
+$gradient_purpink_purple: #7f00ff;
+$gradient_purpink_pink: #e100ff;
+$gradient_purpink_fallback: $gradient_purpink_purple;
+$gradient_purpink_webkit: -webkit-linear-gradient(
+  to right,
+  $gradient_purpink_pink,
+  $gradient_purpink_purple
+);
+$gradient_purpink_linear: linear-gradient(
+  to right,
+  $gradient_purpink_pink,
+  $gradient_purpink_purple
+);
