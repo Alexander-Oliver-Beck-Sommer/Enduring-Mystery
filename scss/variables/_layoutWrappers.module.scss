@@ -1,0 +1,31 @@
+@use "../abstracts/" as *;
+
+.layout_wrapper_default {
+  padding: em(25px);
+  @include xl {
+    padding: em(25px) em(100px);
+  }
+}
+
+.layout_wrapper_default_sides {
+  padding: 0 em(25px);
+  @include xl {
+    padding: 0 em(100px);
+  }
+}
+
+.layout_wrapper_default_top {
+  padding: em(25px) 0;
+}
+
+.footer_layout_wrapper {
+  padding-top: em(50px);
+}
+
+// Activate border on all layout wrappers:
+// .layout_wrapper_default,
+// .layout_wrapper_default_sides,
+// .layout_wrapper_default_top,
+// .footer_layout_wrapper {
+//   border: solid em(1px) red;
+// }

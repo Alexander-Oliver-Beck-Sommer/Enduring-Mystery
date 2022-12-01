@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import ColorBarComponent from "./structure-components/colorbar-component/ColorBar";
 import HeaderComponent from "./structure-components/Header";
-import FooterComponent from "./structure-components/footer-component/Footer";
+import FooterComponent from "./structure-components/Footer";
 
 export default function Layout({ children }) {
   const router = useRouter();
