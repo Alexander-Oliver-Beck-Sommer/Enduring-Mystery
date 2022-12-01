@@ -2,7 +2,12 @@ import styles from "../../scss/components/_footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import FooterLogo from "../../public/logos/edm-full-logo.png";
-import { MdWebAsset, MdRule, MdPhoneIphone } from "react-icons/md";
+import {
+  HiMagnifyingGlass,
+  HiOutlineScale,
+  HiOutlinePhone,
+} from "react-icons/hi2";
+import { IoShareSocialOutline } from "react-icons/io5";
 
 export default function FooterComponent() {
   return (
@@ -20,7 +25,7 @@ export default function FooterComponent() {
         <div className={styles.content_links_containers}>
           <div className={styles.content_title}>
             <h3>overview</h3>
-            <MdWebAsset className={styles.content_title_icon} />
+            <HiMagnifyingGlass className={styles.content_title_icon} />
           </div>
           <ul>
             <li>
@@ -61,33 +66,6 @@ export default function FooterComponent() {
             </li>
             <li>
               <Link
-                href="/contact"
-                className={styles.content_quick_links}
-                aria-label="Go to contact page"
-              >
-                <p>contact</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/user-wishlist"
-                className={styles.content_quick_links}
-                aria-label="Go to wishlist page"
-              >
-                <p>wishlist</p>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/user-account"
-                className={styles.content_quick_links}
-                aria-label="Go to account page"
-              >
-                <p>account</p>
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/checkout"
                 className={styles.content_quick_links}
                 aria-label="Go to checkout page"
@@ -100,7 +78,7 @@ export default function FooterComponent() {
         <div className={styles.content_links_containers}>
           <div className={styles.content_title}>
             <h3>Legal</h3>
-            <MdRule className={styles.content_title_icon} />
+            <HiOutlineScale className={styles.content_title_icon} />
           </div>
           <ul>
             <li>
@@ -144,7 +122,7 @@ export default function FooterComponent() {
         <div className={styles.content_links_containers}>
           <div className={styles.content_title}>
             <h3>contact</h3>
-            <MdPhoneIphone className={styles.content_title_icon} />
+            <HiOutlinePhone className={styles.content_title_icon} />
           </div>
           <ul>
             <li>
@@ -180,6 +158,69 @@ export default function FooterComponent() {
                 <p>
                   <b>offices: </b>Skæringvej 88, 8520 Lystrup
                 </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.content_links_containers}>
+          <div className={styles.content_title}>
+            <h3>social</h3>
+            <IoShareSocialOutline className={styles.content_title_icon} />
+          </div>
+          <ul>
+            <li>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.content_quick_links}
+                aria-label="Click here to see our twitter account"
+              >
+                <p>Twitter</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.content_quick_links}
+                aria-label="Click here to see our facebook page"
+              >
+                <p>facebook</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.content_quick_links}
+                aria-label="Click here to see our instagram account"
+              >
+                <p>instagram</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.content_quick_links}
+                aria-label="Click here to see our youtube channel"
+              >
+                <p>youtube</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noreferrer"
+                className={styles.content_quick_links}
+                aria-label="Click here to see our linkedin account"
+              >
+                <p>linkedin</p>
               </a>
             </li>
           </ul>

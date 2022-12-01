@@ -4,7 +4,6 @@
 .footer_overall_container {
   background-color: $colors_main_white;
   box-shadow: rgba($colors_main_grey, 0.1) em(0px) em(4px) em(12px);
-  border: solid 1px black;
   display: flex;
   flex-direction: column;
   gap: em(50px);
@@ -23,6 +22,7 @@
     }
     & .content_links_containers {
       display: flex;
+      flex-wrap: wrap;
       flex-direction: column;
       justify-content: flex-start;
       & .content_title {
@@ -31,7 +31,7 @@
         align-items: center;
         padding-bottom: em(10px);
         margin-bottom: em(10px);
-        border-bottom: solid (1px) $colors_main_grey;
+        border-bottom: solid (1px) $colors_default_ghostWhite;
         & h3 {
           font-size: $font__size_20;
         }
@@ -51,14 +51,34 @@
           & p {
             transition: $transition_300ms;
             margin: 0;
-            font-size: $font__size_18;
             text-transform: uppercase;
-            letter-spacing: em(2px);
+            letter-spacing: em(1px);
           }
           :hover {
             color: $colors_main_purple;
           }
         }
+      }
+    }
+    @include desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: em(50px);
+      & .footer_content_logo {
+        width: 100%;
+      }
+      & .content_links_containers {
+        width: 40%;
+      }
+    }
+    @include xl {
+      justify-content: center;
+
+      & .content_links_containers {
+        max-width: none;
+        width: 20%;
       }
     }
   }
