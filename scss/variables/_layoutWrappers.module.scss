@@ -23,9 +23,9 @@
 }
 
 .layout_wrapper_page {
-  padding: em(50px) em(25px);
+  padding: em(75px) em(25px);
   @include xl {
-    padding: em(50px) em(100px);
+    padding: em(100px);
   }
 }
 

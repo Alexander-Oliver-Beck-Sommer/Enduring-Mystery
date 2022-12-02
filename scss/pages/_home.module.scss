@@ -2,6 +2,7 @@
 @forward "../variables/layoutWrappers.module";
 
 .landing_banner_container {
+  padding-top: em(50px);
   padding-bottom: em(100px);
   border-radius: 0 0 em(50px) em(50px);
   display: flex;
@@ -86,6 +87,119 @@
       & img {
         max-height: em(500px);
       }
+    }
+  }
+}
+
+.home_page_container {
+  & .motto_explanation_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: em(30px);
+    & .motto_title {
+      text-align: center;
+      & h2 {
+        font-weight: bold;
+        color: $colors_main_grey;
+        font-size: $font__size_20;
+        @include tablet {
+          font-size: $font__size_24;
+        }
+      }
+    }
+    & .motto_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: em(25px);
+      & .content_cube_container {
+        max-width: em(300px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: em(16px);
+        & .content_cube {
+          box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
+          width: 100%;
+          border-radius: em(5px);
+          width: em(100px);
+          height: em(100px);
+          background-color: $colors_main_blue;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & .cube_icon {
+            width: em(50px);
+            height: em(50px);
+            color: $colors_main_white;
+          }
+        }
+        & .content_text {
+          text-align: center;
+          & h3 {
+            font-weight: bold;
+          }
+          & p {
+            margin-top: em(8px);
+            margin-bottom: 0;
+            color: $colors_main_grey;
+          }
+        }
+        // &:nth-child(3) {
+        //   & .content_cube {
+        //     background-color: $colors_main_blue;
+        //   }
+        // }
+        // &:nth-child(5) {
+        //   & .content_cube {
+        //     background-color: $colors_main_yellow;
+        //   }
+        // }
+      }
+      & .content_dotted_line {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: em(10px);
+        & .dotted_line_dot {
+          width: em(8px);
+          height: em(8px);
+          border-radius: em(100px);
+          background-color: $colors_main_grey;
+        }
+        & .dotted_line_line {
+          border-right: dotted em(5px) $colors_default_ghostWhite;
+          height: em(35px);
+        }
+      }
+      @include desktop {
+        flex-direction: row;
+        & .content_cube_container {
+          max-width: em(350px);
+        }
+        & .content_dotted_line {
+          flex-direction: row;
+          justify-content: center;
+          & .dotted_line_line {
+            border-right: none;
+            border-bottom: dotted em(5px) $colors_default_ghostWhite;
+            height: 0;
+            width: em(35px);
+            @include xl {
+              width: em(100px);
+            }
+          }
+        }
+      }
+    }
+  }
+  & .wares_showcase_container {
+    & .wares_showcase_title {
+      text-align: center;
     }
   }
 }
