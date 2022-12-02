@@ -13,7 +13,7 @@ export default function HomePage() {
         className={`${styles["home_page_container"]} ${styles["layout_wrapper_page"]}`}
       >
         <HomeMottoExplanation />
-        {/* <HomeWaresShowcase /> */}
+        <HomeWaresShowcase />
       </div>
     </>
   );

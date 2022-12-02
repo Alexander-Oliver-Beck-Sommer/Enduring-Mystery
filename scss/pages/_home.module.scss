@@ -92,10 +92,15 @@
 }
 
 .home_page_container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: em(150px);
   & .motto_explanation_container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: em(50px);
     & .motto_title {
@@ -189,6 +194,8 @@
     }
     & .motto_button_container {
       & .motto_button {
+        box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
+        text-align: center;
         padding: em(15px) em(50px);
         background-color: $colors_main_blue;
         color: $colors_main_white;
@@ -205,8 +212,61 @@
     }
   }
   & .wares_showcase_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: em(50px);
     & .wares_showcase_title {
       text-align: center;
+      & h2 {
+        font-weight: bold;
+        color: $colors_main_grey;
+        font-size: $font__size_20;
+        @include tablet {
+          font-size: $font__size_24;
+        }
+      }
+    }
+    & .wares_showcase_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      & .wares_item_boxes {
+        border-radius: 0 em(5px) em(5px) 0;
+        box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
+        border-left: solid em(15px) $colors_main_purple;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        & .item_thumbnail {
+          display: flex;
+          justify-content: center;
+          padding: em(30px) 0;
+          & img {
+            max-height: em(150px);
+            width: auto;
+            filter: grayscale(100%);
+          }
+        }
+        & .item_text {
+          text-align: left;
+          padding: em(15px) em(15px) em(50px);
+          border-top: solid em(1px) $colors_default_ghostWhite;
+          gap: em(8px);
+          display: flex;
+          flex-direction: column;
+          & h6 {
+            color: $colors_main_grey;
+          }
+          & p {
+            margin: 0;
+            color: $colors_main_grey;
+          }
+        }
+      }
     }
   }
 }
