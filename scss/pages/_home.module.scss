@@ -96,7 +96,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: em(30px);
+    align-items: center;
+    gap: em(50px);
     & .motto_title {
       text-align: center;
       & h2 {
@@ -148,16 +149,6 @@
             color: $colors_main_grey;
           }
         }
-        // &:nth-child(3) {
-        //   & .content_cube {
-        //     background-color: $colors_main_blue;
-        //   }
-        // }
-        // &:nth-child(5) {
-        //   & .content_cube {
-        //     background-color: $colors_main_yellow;
-        //   }
-        // }
       }
       & .content_dotted_line {
         display: flex;
@@ -193,6 +184,22 @@
               width: em(100px);
             }
           }
+        }
+      }
+    }
+    & .motto_button_container {
+      & .motto_button {
+        padding: em(15px) em(50px);
+        background-color: $colors_main_blue;
+        color: $colors_main_white;
+        border-radius: em(5px);
+        cursor: pointer;
+        transition: $transition_300ms;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: $colors_main_purple;
         }
       }
     }

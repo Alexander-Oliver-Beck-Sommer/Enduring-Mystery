@@ -63,6 +63,16 @@ export default function HomeMottoExplanation() {
           </div>
         </div>
       </div>
+      <div className={styles.motto_button_container}>
+        <Link
+          href="/origin"
+          aria-label="Click to read more about who we are, on the origin page"
+        >
+          <div className={styles.motto_button}>
+            <h4>Read more on origin</h4>
+          </div>
+        </Link>
+      </div>
     </section>
   );
 }
