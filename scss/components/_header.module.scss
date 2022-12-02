@@ -30,9 +30,6 @@
         max-height: em(43px);
       }
     }
-    // & .header_burger_button {
-    //   border: solid 1px red;
-    // }
   }
   @include desktop {
     display: none;

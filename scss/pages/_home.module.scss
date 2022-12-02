@@ -1,0 +1,91 @@
+@use "../abstracts/" as *;
+@forward "../variables/layoutWrappers.module";
+
+.landing_banner_container {
+  padding-bottom: em(100px);
+  border-radius: 0 0 em(50px) em(50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: $colors_main_white;
+  box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
+  background-color: $colors_main_black; // Fallback color if the background image/animation does not work
+  background-image: url("../../public/images/background-patterns/pattern-dark-tactile.png");
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
+  animation: gradientAnimation 100s ease infinite;
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+  gap: em(50px);
+  & .landing_banner_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: em(16px);
+    & h2 {
+      font-weight: bold;
+    }
+    & .banner_title_icons {
+      color: $colors_main_yellow;
+    }
+    & p {
+      margin: 0;
+    }
+  }
+  & .button_white_redirect {
+    border: solid em(2px) $colors_main_white;
+    background-color: transparent;
+    border-radius: em(5px);
+    padding: em(15px) em(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition_300ms;
+    &:hover {
+      background-color: $colors_main_white;
+      color: $colors_main_black;
+    }
+  }
+  & .landing_banner_image {
+    & img {
+      box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
+
+      max-height: em(300px);
+      width: auto;
+    }
+  }
+  @include tablet {
+    & .landing_banner_text {
+      max-width: em(750px);
+    }
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: em(100px);
+    & .landing_banner_text {
+      max-width: em(750px);
+      text-align: left;
+      align-items: flex-start;
+      & .button_white_redirect {
+        max-width: em(400px);
+      }
+    }
+    & .landing_banner_image {
+      & img {
+        max-height: em(500px);
+      }
+    }
+  }
+}
