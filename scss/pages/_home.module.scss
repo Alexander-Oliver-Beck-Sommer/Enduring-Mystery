@@ -233,14 +233,45 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: stretch;
+      gap: em(50px);
       & .wares_item_boxes {
-        border-radius: 0 em(5px) em(5px) 0;
+        border-radius: em(5px);
         box-shadow: rgba($colors_main_black, 0.1) em(0px) em(4px) em(12px);
-        border-left: solid em(15px) $colors_main_purple;
+        border-left: solid em(10px) $colors_wareStatus_green;
         display: flex;
         flex-direction: column;
         align-items: stretch;
         justify-content: flex-start;
+        &:nth-child(2) {
+          border-left: solid em(10px) $colors_wareStatus_yellow;
+          & .item_text {
+            & .text_title {
+              & .ware_status_icon {
+                background-color: $colors_wareStatus_yellow;
+              }
+            }
+            & .item_buttons {
+              & .ware_button_cart {
+                background-color: $colors_wareStatus_yellow;
+              }
+            }
+          }
+        }
+        &:nth-child(3) {
+          border-left: solid em(10px) $colors_wareStatus_red;
+          & .item_text {
+            & .text_title {
+              & .ware_status_icon {
+                background-color: $colors_wareStatus_red;
+              }
+            }
+            & .item_buttons {
+              & .ware_button_cart {
+                background-color: $colors_wareStatus_red;
+              }
+            }
+          }
+        }
         & .item_thumbnail {
           display: flex;
           justify-content: center;
@@ -248,12 +279,12 @@
           & img {
             max-height: em(150px);
             width: auto;
-            filter: grayscale(100%);
+            // filter: grayscale(100%);
           }
         }
         & .item_text {
           text-align: left;
-          padding: em(15px) em(15px) em(50px);
+          padding: em(15px);
           border-top: solid em(1px) $colors_default_ghostWhite;
           gap: em(8px);
           display: flex;
@@ -261,11 +292,58 @@
           & h6 {
             color: $colors_main_grey;
           }
+          & .text_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & .ware_status_icon {
+              width: em(7px);
+              height: em(7px);
+              background-color: $colors_wareStatus_green;
+              border-radius: 50%;
+            }
+          }
           & p {
-            margin: 0;
+            margin-top: 0;
+            margin-bottom: em(25px);
             color: $colors_main_grey;
           }
         }
+        & .item_buttons {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          & .ware_button_cart {
+            border-radius: em(7px);
+            background-color: $colors_wareStatus_green;
+            color: $colors_main_white;
+            border: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: em(20px) em(30px);
+            & .ware_button_icon {
+              font-size: $font__size_20;
+            }
+          }
+        }
+      }
+      @include tablet {
+        align-items: center;
+        & .wares_item_boxes {
+          width: 100%;
+          max-width: em(400px);
+          height: em(450px);
+          max-height: em(450px);
+        }
+      }
+      @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
       }
     }
   }
