@@ -1,0 +1,144 @@
+@use "../abstracts/" as *;
+
+.landing_banner_container {
+  width: 100%;
+  padding: 0 em(25px) em(50px);
+  transition: $transition_300ms;
+  color: $colors_main_white;
+  background-color: $colors_main_white;
+  & .landing_banner_content {
+    border-radius: em(15px);
+    background-color: $colors_main_black; // If the background image fails to load in...
+    background-image: url("../../public/images/background-patterns/pattern-dark-tactile.png");
+    background-repeat: repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: em(50px);
+    padding: em(50px) em(25px) 0;
+    & .banner_text_container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      & .text_title {
+        & h2 {
+          font-weight: bold;
+          & .title_dots {
+            color: $colors_main_yellow;
+          }
+        }
+      }
+      & .text_sub_title {
+        max-width: em(375px);
+        margin-top: em(16px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: em(10px);
+        & .sub_title_icons {
+          color: $colors_main_yellow;
+          transform: rotate(-90deg);
+          font-size: $font__size_16;
+          &:last-child {
+            transform: rotate(90deg);
+          }
+        }
+        & h6 {
+          font-size: $font__size_12;
+          color: $colors_main_grey;
+        }
+      }
+      & .text_body_text {
+        & p {
+          & .colored_body_text {
+            color: $colors_main_yellow;
+            font-weight: bold;
+          }
+        }
+      }
+      & .text_buttons_wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: em(25px);
+        justify-content: flex-start;
+        align-items: stretch;
+        & .button_redirect_transparentWhite {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 50px;
+          border: solid 1px $colors_main_white;
+          border-radius: em(5px);
+          padding: em(5px) em(30px);
+          transition: $transition_300ms;
+          &:hover {
+            background-color: $colors_main_white;
+            color: $colors_main_black;
+          }
+        }
+        @include tablet {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+        }
+      }
+      @include desktop {
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+        max-width: em(600px);
+      }
+      @include xl {
+        max-width: em(700px);
+      }
+    }
+    & .banner_image_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img {
+        max-height: em(150px);
+        filter: saturate(125%);
+        width: auto;
+      }
+      @include desktop {
+        width: 100%;
+        & img {
+          max-height: em(300px);
+        }
+      }
+      @include desktop {
+        display: none;
+      }
+    }
+  }
+
+  @include desktop {
+    padding: em(25px);
+    & .landing_banner_content {
+      flex-direction: row;
+      justify-content: stretch;
+      align-items: stretch;
+      padding: em(50px) em(50px) em(75px);
+    }
+  }
+  @include xl {
+    padding: 0;
+    & .landing_banner_content {
+      position: relative;
+      border-radius: 0;
+      padding: em(100px);
+      background-image: url("../../public/images/landing-banner-images/landing-banner-background-image.jpg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+    }
+  }
+}

@@ -1,53 +1,68 @@
-import styles from "../../../scss/pages/_home.module.scss";
+import styles from "../../../scss/components/_landingBanner.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import { TbTriangleInverted, TbTriangle } from "react-icons/tb";
-import LandingBannerImage from "../../../public/images/section-images/golden-statue-skull-within.png";
+import { BsTriangle } from "react-icons/bs";
+import BannerSkullImage from "../../../public/images/landing-banner-images/landing-banner-skull.png";
 
 export default function HomeLandingBanner() {
   return (
     <section
-      className={`${styles["landing_banner_container"]} ${styles["layout_wrapper_page"]}`}
+      className={styles.landing_banner_container}
       aria-label="Landing Banner Section"
     >
-      <div className={styles.landing_banner_text}>
-        <h5>Scout - Collect - Sell</h5>
-        <h2>Mysteries worth solving...</h2>
-        <div className={styles.banner_title_icons}>
-          <TbTriangleInverted />
-          <TbTriangle />
-          <TbTriangleInverted />
-          <TbTriangle />
-          <TbTriangleInverted />
-          <TbTriangle />
-        </div>
-        <p>Welcome to a bizzare experience.</p>
-        <p>
-          We specialize in scouting, collecting, and selling artifacts
-          throughout our whole word... or from others.
-        </p>
-        <p>
-          You might not have heard of us before untill now. This is mainly
-          because we operate independently from most other sellers due. to the
-          nature of the items we collect and sell.
-        </p>
-        <p>
-          We sell a huge array of different objects we have collected throughout
-          our active years. These objects can sometimes compose of artifacts,
-          relics, momentoes or even forbidden taboos that can endanger life
-          itself.
-        </p>
-        <Link href="/shop" alt="Click to browse our shop catalogue">
-          <div className={styles.button_white_redirect}>
-            <h4>Browse shop catalogue</h4>
+      <div className={styles.landing_banner_content}>
+        <div className={styles.banner_text_container}>
+          <div className={styles.text_title}>
+            <h2>
+              Mysteries worth solving
+              <span className={styles.title_dots}>...</span>
+            </h2>
           </div>
-        </Link>
-      </div>
-      <div className={styles.landing_banner_image}>
-        <Image
-          src={LandingBannerImage}
-          alt="Cracked statue head, with a golden skull within."
-        />
+          <div className={styles.text_sub_title}>
+            <BsTriangle className={styles.sub_title_icons} />
+            <h6>Welcome to enduring mystery</h6>
+            <BsTriangle className={styles.sub_title_icons} />
+          </div>
+          <div className={styles.text_body_text}>
+            <p>
+              We specialize in scouting, collecting and selling artifacts
+              throughout the whole world.
+            </p>
+            <p>
+              The items we sell, can at times be unobtainable for longer
+              periods. This is however only mainly applicable for rarer items,
+              such as: <b>Taboos</b>, <b>Momentoes</b> & <b>Relics</b>.
+            </p>
+            <p>
+              Besides selling acquired items at our disposition,{" "}
+              <span className={styles.colored_body_text}>ENDURING MYSTERY</span>{" "}
+              also operates as a paid-service for those who are in search for
+              lost/hidden items, artifacts and etc.
+            </p>
+          </div>
+          <div className={styles.text_buttons_wrapper}>
+            <Link
+              className={styles.button_redirect_transparentWhite}
+              href="/shop"
+              alt="Click to browse our shop catalogue."
+            >
+              <h4>Browse shop</h4>
+            </Link>
+            <Link
+              className={styles.button_redirect_transparentWhite}
+              href="/services"
+              alt="Click to read more about our service prices."
+            >
+              <h4>Services</h4>
+            </Link>
+          </div>
+        </div>
+        <div className={styles.banner_image_container}>
+          <Image
+            src={BannerSkullImage}
+            alt="Yellow skull with roses around it."
+          />
+        </div>
       </div>
     </section>
   );
