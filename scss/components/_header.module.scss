@@ -115,8 +115,8 @@
 }
 
 .navigation_mobile_container {
-  background-color: $colors_main_white;
   z-index: 999;
+  background-color: $colors_main_white;
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -211,6 +211,7 @@
       $colors_main_white em(0.5px)
     );
     background-size: em(10px) em(10px);
+    z-index: 9999;
     position: absolute;
     top: em(175px);
     width: 100%;

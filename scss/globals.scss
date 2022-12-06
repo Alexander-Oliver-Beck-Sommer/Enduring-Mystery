@@ -10,18 +10,6 @@ body {
   color: $colors_main_black;
 }
 
-main {
-  // Test height
-  // height: em(5000px);
-  z-index: 1;
-  // background-color: pink;
-  // transition: padding $transition_300ms;
-  // padding: em(50px) em(25px);
-  // @include xl {
-  //   padding: em(50px) em(100px);
-  // }
-}
-
 * {
   font-family: $font__family_roboto;
   box-sizing: border-box;

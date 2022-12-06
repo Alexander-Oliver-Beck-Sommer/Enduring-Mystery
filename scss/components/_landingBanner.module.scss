@@ -3,12 +3,11 @@
 .landing_banner_container {
   width: 100%;
   padding: 0 em(25px) em(50px);
-  transition: $transition_300ms;
   color: $colors_main_white;
   background-color: $colors_main_white;
   & .landing_banner_content {
     border-radius: em(15px);
-    background-color: $colors_main_black; // If the background image fails to load in...
+    background-color: $colors_main_black;
     background-image: url("../../public/images/background-patterns/pattern-dark-tactile.png");
     background-repeat: repeat;
     background-position: center;
@@ -114,7 +113,7 @@
           max-height: em(300px);
         }
       }
-      @include desktop {
+      @include xl {
         display: none;
       }
     }
@@ -130,9 +129,9 @@
     }
   }
   @include xl {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     padding: 0;
     & .landing_banner_content {
-      position: relative;
       border-radius: 0;
       padding: em(100px);
       background-image: url("../../public/images/landing-banner-images/landing-banner-background-image.jpg");
